@@ -1,0 +1,128 @@
+{
+  "29": {
+    "inputs": {
+      "filename_prefix": "reel_fundo",
+      "images": [
+        "54",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Salvar Imagem"
+    }
+  },
+  "52": {
+    "inputs": {
+      "text": "PROMPT",
+      "clip": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Codificação de Texto CLIP (Prompt)"
+    }
+  },
+  "54": {
+    "inputs": {
+      "samples": [
+        "61",
+        0
+      ],
+      "vae": [
+        "57",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decodificar"
+    }
+  },
+  "55": {
+    "inputs": {
+      "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Carregar Modelo de Difusão"
+    }
+  },
+  "56": {
+    "inputs": {
+      "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+      "type": "krea2",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Carregar CLIP"
+    }
+  },
+  "57": {
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Carregar VAE"
+    }
+  },
+  "61": {
+    "inputs": {
+      "seed": 177130728861044,
+      "steps": 12,
+      "cfg": 1,
+      "sampler_name": "euler",
+      "scheduler": "beta",
+      "denoise": 1,
+      "model": [
+        "55",
+        0
+      ],
+      "positive": [
+        "52",
+        0
+      ],
+      "negative": [
+        "63",
+        0
+      ],
+      "latent_image": [
+        "73",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "63": {
+    "inputs": {
+      "text": "deformed, blurry, low quality, bad anatomy, extra limbs, mutated hands, ugly, poorly drawn face, bad proportions, watermark, text, overexposed, underexposed, plastic skin, doll-like, cartoon, painting, illustration, artifacts, noise",
+      "clip": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "Codificação de Texto CLIP (Prompt)"
+    }
+  },
+  "73": {
+    "inputs": {
+      "width": 1024,
+      "height": 1792,
+      "batch_size": 1
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Imagem Latente Vazia"
+    }
+  }
+}

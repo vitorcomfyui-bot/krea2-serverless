@@ -1,0 +1,7 @@
+# <url>  <pasta em /comfyui/models>  <nome do arquivo>
+# Krea 2 Turbo oficial (repackaged pela Comfy-Org) — os nomes batem com pipeline/workflows/krea2_api.json
+https://huggingface.co/Comfy-Org/Krea-2/resolve/main/diffusion_models/krea2_turbo_fp8_scaled.safetensors  diffusion_models  krea2_turbo_fp8_scaled.safetensors
+https://huggingface.co/Comfy-Org/Krea-2/resolve/main/text_encoders/qwen3vl_4b_fp8_scaled.safetensors      text_encoders     qwen3vl_4b_fp8_scaled.safetensors
+https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/vae/qwen_image_vae.safetensors  vae  qwen_image_vae.safetensors
+# LoRA de realismo opcional (se quiser, adicione o nó LoraLoaderModelOnly de volta no workflow):
+# https://SEU-BUCKET.r2.dev/lenovo_krea2.safetensors  loras  lenovo_krea2.safetensors

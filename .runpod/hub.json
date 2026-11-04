@@ -1,0 +1,20 @@
+{
+  "title": "Krea 2 Turbo — Text to Image",
+  "description": "Krea 2 Turbo (fp8) no ComfyUI, pronto para API. Envie só o prompt (ou um workflow ComfyUI completo) e receba a imagem em base64. Ideal para fundos de vídeo, carrosséis e automações. Modelos já dentro da imagem: cold start rápido, sem Network Volume.",
+  "type": "serverless",
+  "category": "image",
+  "config": {
+    "runsOn": "GPU",
+    "containerDiskInGb": 20,
+    "gpuCount": 1,
+    "gpuIds": "ADA_24,AMPERE_24,ADA_48_PRO,AMPERE_48",
+    "allowedCudaVersions": [
+      "12.8",
+      "12.7",
+      "12.6",
+      "12.5",
+      "12.4"
+    ],
+    "env": []
+  }
+}

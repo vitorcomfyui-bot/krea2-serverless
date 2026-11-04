@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "name": "prompt_simples",
+      "input": {
+        "prompt": "cinematic photo of a business jet flying above storm clouds at sunset, dramatic light",
+        "width": 768,
+        "height": 1344,
+        "seed": 42,
+        "steps": 12
+      },
+      "timeout": 600000
+    }
+  ],
+  "config": {
+    "gpuTypeId": "NVIDIA GeForce RTX 4090",
+    "gpuCount": 1,
+    "allowedCudaVersions": [
+      "12.8",
+      "12.7",
+      "12.6",
+      "12.5",
+      "12.4"
+    ]
+  }
+}

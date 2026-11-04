@@ -1,0 +1,2 @@
+# Um custom node por linha (nome do registry do ComfyUI), ex.:
+# comfyui-kjnodes
